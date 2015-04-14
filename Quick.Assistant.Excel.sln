@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick.Assistant.Excel", "Quick.Assistant.Excel\Quick.Assistant.Excel.csproj", "{AE312D3C-0880-4F06-89D8-65B4F6B344DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick.Assistant.Excel.Test", "Quick.Assistant.Excel.Test\Quick.Assistant.Excel.Test.csproj", "{44FE7AA2-E59C-4B61-889A-8A91C24906BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AE312D3C-0880-4F06-89D8-65B4F6B344DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE312D3C-0880-4F06-89D8-65B4F6B344DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE312D3C-0880-4F06-89D8-65B4F6B344DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44FE7AA2-E59C-4B61-889A-8A91C24906BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FE7AA2-E59C-4B61-889A-8A91C24906BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FE7AA2-E59C-4B61-889A-8A91C24906BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FE7AA2-E59C-4B61-889A-8A91C24906BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

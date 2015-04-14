@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Quick.Assistant.Excel
 {
-    public class Class1
-    {
-    }
+  public class SheetInfo
+  {
+    public string Name { get; set; }
+    public List<CellInfo> Cells { get; set; }
+  }
 }
