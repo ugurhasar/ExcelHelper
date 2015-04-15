@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Quick.Assistant.Excel
 {
-  public class SheetInfo
-  {
-    public string Name { get; set; }
-    public List<CellInfo> Cells { get; set; }
-  }
+    public class SheetInfo
+    {
+        public SheetInfo()
+        {
+            this.Cells = new List<CellInfo>();
+        }
+
+        public string Name { get; set; }
+        public List<CellInfo> Cells { get; set; }
+    }
 }
