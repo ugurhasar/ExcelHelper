@@ -59,8 +59,16 @@ namespace Quick.Assistant.Excel
             {
                 cell = existingCells.Where(c => string.Compare(c.CellReference.Value, string.Concat(cellInfo.ColumnName, cellInfo.RowIndex), true) == 0).FirstOrDefault();
 
-                cell.RemoveAllChildren();
-                cell.DataType = cellInfo.DataType;
+                if (cell == null)
+                {
+                    cell = this.CreateCell(cellInfo);
+                    row.AppendChild(cell);
+                }
+                else
+                {
+                    cell.RemoveAllChildren();
+                    cell.DataType = cellInfo.DataType;
+                }
             }
             else
             {
@@ -109,7 +117,12 @@ namespace Quick.Assistant.Excel
                 cellInfo.RowIndex = this.GetCellRowIndex(cell.CellReference.Value);
             }
 
-            cellInfo.DataType = cell.DataType == null ? null : cell.DataType;
+            if (cell.DataType != null)
+            {
+                cellInfo.DataType = cell.DataType.Value;
+            }
+
+            //cellInfo.DataType = cell.DataType == null ? null : cell.DataType;
             cellInfo.Value = (value ?? string.Empty).Trim();
 
             return cellInfo;
@@ -122,6 +135,7 @@ namespace Quick.Assistant.Excel
 
             return match.Value;
         }
+
         private uint GetCellRowIndex(string cellReference)
         {
             Regex regex = new Regex(@"\d+");
